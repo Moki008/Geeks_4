@@ -1,16 +1,26 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from datetime import datetime
-from . import models
+from . import models, forms
 
 
 def book_list_view(request):
     if request.method == 'GET':
+        form = forms.ReviewForm()
         query = models.BookModel.objects.all()
         context_object = {
-            'book': query
+            'book': query,
+            'form': form
+
         }
         return render(request, template_name='book.html', context=context_object)
+    if request.method == 'POST':
+        form = forms.ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponse('Review added')
+        return HttpResponse('Error')
+
 
 
 def book_detail_view(request, id):

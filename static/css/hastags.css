@@ -1,0 +1,53 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #e1d47c;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: #e1bf34;
+}
+.btn a{
+    text-decoration: none;
+}
+
+.content {
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+}
+
+.model {
+    margin-bottom: 30px;
+}
+
+code {
+    display: block;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.white{
+    color: white;
+}

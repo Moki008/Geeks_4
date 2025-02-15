@@ -1,0 +1,21 @@
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'css/hastags.css'%}">
+<div class="container">
+    <!-- Buttons Section -->
+    <div class="buttons">
+        <button class="btn"><a href="">Детская</a></button>
+        <button class="btn"><a href="">Подростковая</a></button>
+        <button class="btn"><a href="">Взрослая</a></button>
+    </div>
+    {% for i in adult_clothes %}
+    <!-- Content Section -->
+    <div class="content">
+        <p class='white'>{{ i.title }}</p>
+        <p class="white">{{ i.price }}</p>
+        <hr class="white">
+    </div>
+    {% endfor %}
+</div>
+
+{% include 'components/footer.html' %}
