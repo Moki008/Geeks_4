@@ -34,7 +34,7 @@ class Review(models.Model):
         ("🌟🌟🌟🌟🌟", "🌟🌟🌟🌟🌟"),
     )
     book = models.ForeignKey(BookModel, on_delete=models.CASCADE,
-                                    related_name='book')
+                                    related_name='book', null=True, blank=True)
     created_at = models.DateField(auto_now_add=True)
     review_text = models.TextField(default='')
     stars = models.CharField(max_length=10, choices=STARS, default='🌟🌟')

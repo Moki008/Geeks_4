@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Вы уверены?</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Дa</button>
+    <button><a href="{% url 'todo_list' %}">Нет</a></button>
+</form>
+
+</body>
+</html>

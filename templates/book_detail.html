@@ -18,13 +18,16 @@
     </div>
 
     <!-- Блок для комментариев -->
-    {% for i in book_id.book.all %}
-    <div class="comment-section">
-        <h5>Комментарии</h5>
-        <div class="comment">
-            <p>{{ i.created_at }}:{{ i.review_text }}<strong> Оценка:</strong>{{ i.stars }}</p>
-        </div>
-     {% endfor %}
+        {% for i in book_id.book.all %}
+        <div class="comment-section">
+            <h5>Комментарии</h5>
+            <div class="comment">
+                <p>{{ i.created_at }}:{{ i.review_text }}<strong> Оценка:</strong>{{ i.stars }}</p>
+            </div>
+
+
+
+        {% endfor %}
     </div>
 </div>
 

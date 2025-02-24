@@ -4,9 +4,9 @@
 <div class="container">
     <!-- Buttons Section -->
     <div class="buttons">
-        <button class="btn"><a href="">Детская</a></button>
-        <button class="btn"><a href="">Подростковая</a></button>
-        <button class="btn"><a href="">Взрослая</a></button>
+        <button class="btn"><a href="{% url 'kid_clothes' %}">Детская</a></button>
+        <button class="btn"><a href="{% url 'teenage_clothes' %}">Подростковая</a></button>
+        <button class="btn"><a href="{% url 'adult_clothes' %}">Взрослая</a></button>
     </div>
     {% for i in teenage_clothes %}
     <!-- Content Section -->
