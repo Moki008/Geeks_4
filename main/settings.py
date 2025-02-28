@@ -30,7 +30,9 @@ INSTALLED_APPS = [
     'clothes',
     'books',
     'todo',
-    'parser_app'
+    'parser_app',
+    'users',
+    'food'
 ]
 
 MIDDLEWARE = [
@@ -41,6 +43,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'users.middlewares.ExperienceClubMiddleware',
 ]
 
 ROOT_URLCONF = 'main.urls'
