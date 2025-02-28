@@ -16,7 +16,7 @@ class CustomUser(User):
     whats_phone = models.CharField(max_length=14, default='+996000000000')
     experience = models.PositiveIntegerField(default=2)
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES, default='Male')
-    club = models.CharField(max_length=100)
+    club = models.CharField(max_length=100,null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if 0 < self.experience <= 3:
@@ -26,7 +26,7 @@ class CustomUser(User):
         elif 6 < self.experience <= 50:
             self.club = Senior_club
         else:
-            self.club = 'Введи опыт адекватно!'
+            self.club = None
         super().save(*args, **kwargs)
 
 

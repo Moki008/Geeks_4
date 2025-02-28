@@ -9,8 +9,9 @@
 <form method="POST" enctype="application/x-www-form-urlencoded">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Авторизация</button>
-    <button type="reset">Очистить</button>
+    <a href="{% url 'users:user_list' %}">Авторизация</a>
+    <a href="{% url 'users:register' %}">Регистрация</a>
+
 </form>
 </body>
 </html>
